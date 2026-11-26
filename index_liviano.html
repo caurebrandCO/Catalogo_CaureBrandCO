@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CAURÉ BRAND · Catálogo de tenis</title>
+<meta name="description" content="Catálogo exclusivo de tenis CAURÉ BRAND: New Balance, Adidas, Nike, Jordan, On, Puma y más. Todas las tallas, pago contra entrega y envíos a todo el país. Pedidos por WhatsApp.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CAURÉ BRAND · Catálogo de tenis">
+<meta property="og:description" content="Todas las tallas, pago contra entrega y envíos a todo el país. Pedidos por WhatsApp.">
+<meta property="og:locale" content="es_CO">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/brand/favicon-192.png">
+<link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#ffffff;
+  --ink:#111111;
+  --mute:#6a6a6a;
+  --line:#e5e5e5;
+  --chip:#f3f3f3;
+  --chip-hover:#e8e8e8;
+  --chip-active:#111111;
+  --card-bg:#ffffff;
+  --inv:#ffffff;
+  --wa:#25d366;
+  --wa-glow:rgba(37,211,102,0.45);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0d0d;
+    --ink:#f4f4f4;
+    --mute:#9b9b9b;
+    --line:#222222;
+    --chip:#1a1a1a;
+    --chip-hover:#262626;
+    --chip-active:#f4f4f4;
+    --card-bg:#141414;
+    --inv:#0d0d0d;
+    --wa-glow:rgba(37,211,102,0.55);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0d0d;
+  --ink:#f4f4f4;
+  --mute:#9b9b9b;
+  --line:#222222;
+  --chip:#1a1a1a;
+  --chip-hover:#262626;
+  --chip-active:#f4f4f4;
+  --card-bg:#141414;
+  --inv:#0d0d0d;
+  --wa-glow:rgba(37,211,102,0.55);
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 160px)}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:400 16px/1.45 Archivo,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0 0 auto;
+  height:env(safe-area-inset-top,0px);
+  background:var(--bg);
+  z-index:10
+}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+
+/* Logo halcón */
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand-logo{height:44px;width:auto;display:block}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand-logo{filter:invert(1)}}
+:root[data-theme="dark"] .brand-logo{filter:invert(1)}
+@media(max-width:480px){.brand-logo{height:36px}.mark{font-size:24px}}
+.tag.nuevo{background:#00873D;color:#fff;border-color:#00873D}
+.mark{font:900 28px/1 "Big Shoulders Display",Impact,sans-serif;letter-spacing:.02em}
+
+/* Botón Escríbenos con logo WhatsApp y verde luminoso */
+.wa{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  background:linear-gradient(135deg,#25d366 0%,#20ba5a 100%);
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14.5px;
+  padding:11px 20px;
+  border-radius:999px;
+  box-shadow:0 4px 16px var(--wa-glow), 0 0 10px rgba(37,211,102,0.35);
+  transition:all .25s cubic-bezier(0.16,1,0.3,1);
+  animation:wa-pulse 2.8s infinite alternate;
+}
+@keyframes wa-pulse{
+  0%{box-shadow:0 4px 14px var(--wa-glow), 0 0 6px rgba(37,211,102,0.25)}
+  100%{box-shadow:0 6px 24px var(--wa-glow), 0 0 18px rgba(37,211,102,0.55)}
+}
+.wa svg{
+  width:20px;
+  height:20px;
+  fill:currentColor;
+  flex-shrink:0;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+  transition:transform .25s ease;
+}
+.wa:hover{
+  transform:translateY(-2px) scale(1.04);
+  box-shadow:0 8px 28px var(--wa-glow), 0 0 20px rgba(37,211,102,0.7);
+  filter:brightness(1.06);
+}
+.wa:hover svg{transform:scale(1.15) rotate(-5deg)}
+.wa:active{transform:translateY(0) scale(0.97)}
+
+.hero{padding:36px 0 20px;border-top:3px solid var(--ink)}
+h1{margin:0;font:900 clamp(56px,12vw,140px)/.88 "Big Shoulders Display",Impact,sans-serif;letter-spacing:-.01em;text-transform:uppercase}
+.sub{margin:14px 0 0;color:var(--mute);max-width:52ch;font-size:15px;line-height:1.4}
+
+/* Buscador */
+.search-wrap{margin:18px 0 12px;position:relative}
+.search-input{
+  width:100%;
+  max-width:540px;
+  background:var(--chip);
+  border:1.5px solid var(--line);
+  color:var(--ink);
+  padding:12px 20px;
+  font:500 15px Archivo,system-ui,sans-serif;
+  border-radius:999px;
+  outline:none;
+  transition:border-color .2s, background .2s, box-shadow .2s;
+}
+.search-input:focus{
+  border-color:var(--ink);
+  background:var(--bg);
+  box-shadow:0 4px 16px rgba(0,0,0,0.06);
+}
+.search-input::placeholder{color:var(--mute)}
+
+/* ==============================================================
+   NUEVA BARRA DE FILTROS MODERNA E INTERACTIVA
+   ============================================================== */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top,0px);
+  z-index:15;
+  background:var(--bg);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 4px 20px rgba(0,0,0,0.03);
+  backdrop-filter:blur(10px);
+}
+.filter-wrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:10px 16px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.filter-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.filter-label{
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--mute);
+  flex-shrink:0;
+  min-width:50px;
+}
+.chips-container{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  padding:2px 0;
+}
+.chips-container::-webkit-scrollbar{display:none}
+
+/* Estilo mejorado de los botones de filtro */
+.chip{
+  flex:none;
+  display:inline-flex;
+  align-items:center;
+  border:1.5px solid var(--line);
+  background:var(--chip);
+  color:var(--ink);
+  font:600 13px Archivo,sans-serif;
+  padding:7px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  transition:all .2s cubic-bezier(0.16,1,0.3,1);
+  user-select:none;
+}
+.chip:hover{
+  background:var(--chip-hover);
+  border-color:var(--ink);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+.chip:active{transform:scale(0.96)}
+.chip[aria-pressed="true"]{
+  background:var(--ink);
+  color:var(--inv);
+  border-color:var(--ink);
+  box-shadow:0 4px 16px rgba(0,0,0,0.18);
+  transform:translateY(-1px);
+}
+
+/* Burbuja de conteo dentro del botón */
+.chip-count{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:20px;
+  height:20px;
+  padding:0 6px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
+  background:rgba(0,0,0,0.07);
+  color:inherit;
+  margin-left:7px;
+  transition:background .2s, color .2s;
+}
+.chip[aria-pressed="true"] .chip-count{
+  background:rgba(255,255,255,0.25);
+  color:#ffffff;
+}
+
+/* Fila secundaria de tipo y público */
+.filter-row-secondary{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.filter-row-secondary::-webkit-scrollbar{display:none}
+
+.filter-sub-group{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-shrink:0;
+}
+.chip.t{
+  background:transparent;
+  border:1.5px solid var(--line);
+  padding:6px 12px;
+  font-size:12.5px;
+}
+.chip.t:hover{
+  border-color:var(--ink);
+  transform:translateY(-1.5px);
+}
+.chip.t[aria-pressed="true"]{
+  background:var(--ink);
+  color:var(--inv);
+  border-color:var(--ink);
+  box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+/* Botón de limpiar filtros */
+.reset-btn{
+  background:none;
+  border:none;
+  color:#e53935;
+  font-size:12px;
+  font-weight:700;
+  text-decoration:underline;
+  cursor:pointer;
+  padding:4px 8px;
+  flex-shrink:0;
+  margin-left:auto;
+  transition:opacity .15s;
+}
+.reset-btn:hover{opacity:.8}
+
+/* Grid & Cards */
+section{padding:36px 0 12px}
+.bh{display:flex;align-items:baseline;gap:12px;margin:0 0 18px}
+.bh h2{margin:0;font:900 clamp(38px,7vw,64px)/.9 "Big Shoulders Display",Impact,sans-serif;text-transform:uppercase}
+.bh span{color:var(--mute);font-size:14px;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 14px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(3,1fr);gap:20px 16px}}
+@media(min-width:1020px){.grid{grid-template-columns:repeat(4,1fr);gap:24px 20px}}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  background:var(--card-bg);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:12px;
+  transition:transform .25s cubic-bezier(0.16,1,0.3,1), box-shadow .25s cubic-bezier(0.16,1,0.3,1), border-color .25s;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.08);
+  border-color:var(--ink);
+}
+
+.card-media{
+  position:relative;
+  width:100%;
+  aspect-ratio:1/1;
+  background:var(--chip);
+  border-radius:14px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px;
+  cursor:pointer;
+  transition:background .2s;
+}
+.card:hover .card-media{background:var(--chip-hover)}
+.card-media img{
+  display:block;
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  border-radius:8px;
+  transition:transform .35s cubic-bezier(0.16,1,0.3,1);
+}
+.card:hover .card-media img{
+  transform:scale(1.06);
+}
+.zoom-hint{
+  position:absolute;
+  bottom:8px;
+  right:8px;
+  background:rgba(0,0,0,0.65);
+  color:#ffffff;
+  font-size:11px;
+  font-weight:600;
+  padding:3px 9px;
+  border-radius:999px;
+  opacity:0;
+  transition:opacity .2s ease, transform .2s ease;
+  backdrop-filter:blur(4px);
+  pointer-events:none;
+  transform:translateY(4px);
+}
+.card:hover .zoom-hint{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding-top:10px;
+}
+.card h3{margin:0;font:700 16px/1.25 Archivo,system-ui,sans-serif}
+.card p{margin:4px 0 10px;color:var(--mute);font-size:13px;line-height:1.35;flex:1}
+.card-tags{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap}
+.tag{
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  padding:2px 8px;
+  border-radius:6px;
+  background:var(--chip);
+  color:var(--mute);
+  transition:background .2s;
+}
+.card:hover .tag{background:var(--chip-hover)}
+
+/* Botón Pedir por WhatsApp interactivo */
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  text-align:center;
+  text-decoration:none;
+  color:var(--ink);
+  border:1.5px solid var(--ink);
+  background:transparent;
+  font-weight:600;
+  font-size:13.5px;
+  padding:10px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  transition:all .25s cubic-bezier(0.16,1,0.3,1);
+  position:relative;
+}
+.btn svg{
+  width:16px;
+  height:16px;
+  fill:currentColor;
+  flex-shrink:0;
+  transition:transform .2s ease;
+}
+.btn:hover{
+  background:#25d366;
+  border-color:#25d366;
+  color:#ffffff;
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(37,211,102,0.42);
+}
+.btn:hover svg{transform:scale(1.2) rotate(-5deg)}
+.btn:active{transform:translateY(0) scale(0.97)}
+
+/* Lightbox Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(8px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  opacity:0;
+  transition:opacity .25s ease;
+}
+.modal.open{display:flex;opacity:1}
+.modal-box{
+  background:var(--bg);
+  border-radius:24px;
+  max-width:620px;
+  width:100%;
+  max-height:92vh;
+  overflow-y:auto;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 24px 60px rgba(0,0,0,0.4);
+  border:1px solid var(--line);
+  animation:modal-pop .25s cubic-bezier(0.16,1,0.3,1);
+}
+@keyframes modal-pop{
+  from{transform:scale(0.94);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+.modal-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  background:var(--chip);
+  border:none;
+  color:var(--ink);
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:2;
+  transition:background .2s, transform .2s;
+}
+.modal-close:hover{
+  background:var(--chip-hover);
+  transform:scale(1.08);
+}
+.modal-close:active{transform:scale(0.94)}
+.modal-img-wrap{
+  width:100%;
+  max-height:60vh;
+  background:var(--chip);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  border-radius:24px 24px 0 0;
+}
+.modal-img-wrap img{
+  max-width:100%;
+  max-height:55vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:12px;
+}
+.modal-details{padding:22px 26px 26px}
+.modal-details h3{margin:0;font:900 28px/1.1 "Big Shoulders Display",Impact,sans-serif;text-transform:uppercase}
+.modal-details p{margin:6px 0 18px;color:var(--mute);font-size:14.5px}
+.modal-wa{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:linear-gradient(135deg,#25d366 0%,#20ba5a 100%);
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:15px;
+  padding:14px 22px;
+  border-radius:999px;
+  box-shadow:0 6px 20px var(--wa-glow);
+  transition:all .2s ease;
+}
+.modal-wa svg{
+  width:20px;
+  height:20px;
+  fill:currentColor;
+  flex-shrink:0;
+}
+.modal-wa:hover{
+  filter:brightness(1.08);
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 8px 26px var(--wa-glow);
+}
+.modal-wa:active{transform:translateY(0) scale(0.98)}
+
+footer{margin-top:60px;padding:32px 0 44px;border-top:3px solid var(--ink);color:var(--mute);font-size:14px;line-height:1.5}
+footer b{color:var(--ink)}
+@media(prefers-reduced-motion:no-preference){.btn,.wa,.chip{transition:all .2s cubic-bezier(0.16,1,0.3,1)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./" aria-label="CAURÉ BRAND, inicio">
+      <img class="brand-logo" src="images/brand/logo-halcon.png" alt="Halcón, logo de CAURÉ BRAND" width="60" height="49">
+      <span class="mark">CAURÉ BRAND</span>
+    </a>
+    <a class="wa" href="https://wa.me/573008831730?text=%C2%A1Hola!%20Vengo%20del%20cat%C3%A1logo%20de%20CAUR%C3%89%20BRAND." target="_blank" rel="noopener" title="Chatear por WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+      <span>Escríbenos</span>
+    </a>
+  </header>
+  <div class="hero">
+    <h1>Catálogo<br>de tenis</h1>
+    <p class="sub" id="sub"></p>
+    <div class="search-wrap">
+      <input type="search" id="q" class="search-input" placeholder="🔍 Buscar por modelo, marca o color (ej. Air Max 97, Samba, 530, Cloud...)" aria-label="Buscar tenis">
+    </div>
+  </div>
+</div>
+
+<nav class="bar" id="bar" aria-label="Filtros del catálogo">
+  <div class="filter-wrap">
+    <div class="filter-row">
+      <span class="filter-label">Marca</span>
+      <div class="chips-container" id="chips"></div>
+    </div>
+    <div class="filter-row-secondary">
+      <div class="filter-sub-group">
+        <span class="filter-label">Tipo</span>
+        <div class="chips-container" id="chipsT"></div>
+      </div>
+      <div class="filter-sub-group">
+        <span class="filter-label">Para</span>
+        <div class="chips-container" id="chipsG"></div>
+      </div>
+      <button class="reset-btn" id="resetBtn" style="display:none;">✕ Limpiar filtros</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="list"></main>
+
+<footer class="wrap">
+  <b>Pedidos al WhatsApp 300 883 1730.</b> Todas las tallas, pago contra entrega y envíos a todo el país. Escríbenos con el modelo que te gustó y te confirmamos disponibilidad.
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar vista previa">✕</button>
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="">
+    </div>
+    <div class="modal-details">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <a class="modal-wa" id="modalWa" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+        Pedir este modelo por WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script>
+const BASE = [];
+let D = BASE.slice();
+const order = ["New Balance", "Adidas", "Nike", "Jordan", "On", "Louis Vuitton", "Puma", "Reebok", "Vans", "Alexander McQueen"];
+let tipos = [];
+let selT = "Todos", selG = "Todos", query = "";
+const gens = ["Mujer", "Hombre"];
+let brands = [];
+let sel = "Todos";
+const $ = id => document.getElementById(id);
+
+const waIcon = `<svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>`;
+
+const tipoIcons = {
+  "Todos": "✨",
+  "Running": "🏃",
+  "Urbano": "🏙️",
+  "Trail": "🏔️",
+  "Skate": "🛹",
+  "Básquet": "🏀"
+};
+
+const genIcons = {
+  "Todos": "👥",
+  "Mujer": "👩",
+  "Hombre": "👨"
+};
+
+function wa(x) {
+  return "https://wa.me/573008831730?text=" + encodeURIComponent("¡Hola! Vengo del catálogo de CAURÉ BRAND. Me interesa: " + x.b + " " + x.n + " (" + x.c + "). ¿Tienes tallas disponibles?");
+}
+
+const okT = x => selT === "Todos" || x.t === selT;
+const okG = x => selG === "Todos" || x.g === "Unisex" || x.g === selG;
+const okQ = x => {
+  if (!query) return true;
+  const q = query.toLowerCase().trim();
+  return (x.b + " " + x.n + " " + x.c + " " + x.t + " " + x.g).toLowerCase().includes(q);
+};
+
+function vis(x) {
+  return (sel === "Todos" || x.b === sel) && okT(x) && okG(x) && okQ(x);
+}
+
+function updateSub() {
+  const el = $("sub");
+  if (el) {
+    el.textContent = D.length + " modelos exclusivos de " + brands.length + " marcas. Filtra o busca tu estilo y pide el tuyo directamente por WhatsApp.";
+  }
+}
+
+function chips() {
+  // Brand chips with modern count badges
+  $("chips").innerHTML = ["Todos"].concat(brands).map(b => {
+    const n = D.filter(x => (b === "Todos" || x.b === b) && okT(x) && okG(x) && okQ(x)).length;
+    return `<button class="chip" aria-pressed="${b === sel}" data-b="${b}"><span class="chip-name">${b}</span><span class="chip-count">${n}</span></button>`;
+  }).join("");
+
+  // Type chips with icons
+  $("chipsT").innerHTML = ["Todos"].concat(tipos).map(t => {
+    const ico = tipoIcons[t] || "";
+    const label = t === "Todos" ? "Todos los tipos" : t;
+    return `<button class="chip t" aria-pressed="${t === selT}" data-t="${t}"><span class="chip-ico">${ico}</span> <span class="chip-name">${label}</span></button>`;
+  }).join("");
+
+  // Gender chips with icons
+  $("chipsG").innerHTML = ["Todos"].concat(gens).map(g => {
+    const ico = genIcons[g] || "";
+    const label = g === "Todos" ? "Hombre y mujer" : g;
+    return `<button class="chip t" aria-pressed="${g === selG}" data-g="${g}"><span class="chip-ico">${ico}</span> <span class="chip-name">${label}</span></button>`;
+  }).join("");
+
+  // Show/hide reset button
+  const hasFilter = sel !== "Todos" || selT !== "Todos" || selG !== "Todos" || query !== "";
+  const resetBtn = $("resetBtn");
+  if (resetBtn) {
+    resetBtn.style.display = hasFilter ? "inline-block" : "none";
+  }
+}
+
+function list() {
+  const bs = brands.filter(b => D.some(x => x.b === b && vis(x)));
+  if (!bs.length) {
+    $("list").innerHTML = '<section><p class="sub" style="padding:40px 0;text-align:center;">No encontramos modelos con esa combinación o búsqueda. Prueba otro filtro o limpia la búsqueda.</p></section>';
+    return;
+  }
+  $("list").innerHTML = bs.map(b => {
+    const xs = D.filter(x => x.b === b && vis(x));
+    return `<section><div class="bh"><h2>${b}</h2><span>${xs.length} ${xs.length === 1 ? "modelo" : "modelos"}</span></div><div class="grid">` +
+    xs.map(x => {
+      const idx = D.indexOf(x);
+      return `<article class="card">
+        <div class="card-media" onclick="openModal(${idx})" title="Ver foto completa de ${x.b} ${x.n}">
+          <img src="${x.i}" alt="${x.b} ${x.n}, ${x.c}" loading="lazy" decoding="async">
+          <span class="zoom-hint">Ver foto 🔍</span>
+        </div>
+        <div class="card-body">
+          <h3>${x.n}</h3>
+          <p>${x.c}</p>
+          <div class="card-tags">
+            ${x.nuevo ? '<span class="tag nuevo">Nuevo</span>' : ""}<span class="tag">${x.t}</span>
+            <span class="tag">${x.g}</span>
+          </div>
+          <a class="btn" href="${wa(x)}" target="_blank" rel="noopener">
+            ${waIcon}
+            <span>Pedir por WhatsApp</span>
+          </a>
+        </div>
+      </article>`;
+    }).join("") + `</div></section>`;
+  }).join("");
+}
+
+window.openModal = function(idx) {
+  const x = D[idx];
+  if (!x) return;
+  $("modalImg").src = x.i;
+  $("modalImg").alt = x.b + " " + x.n;
+  $("modalTitle").textContent = x.b + " " + x.n;
+  $("modalDesc").textContent = x.c + " · " + x.t + " · " + x.g;
+  $("modalWa").href = wa(x);
+  $("modal").classList.add("open");
+  document.body.style.overflow = "hidden";
+};
+
+function closeModal() {
+  $("modal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+$("modalClose").addEventListener("click", closeModal);
+$("modal").addEventListener("click", e => {
+  if (e.target === $("modal") || e.target.classList.contains("modal-img-wrap")) closeModal();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+});
+
+$("bar").addEventListener("click", e => {
+  const t = e.target.closest(".chip");
+  if (!t) return;
+  if (t.dataset.t !== undefined) selT = t.dataset.t;
+  else if (t.dataset.g !== undefined) selG = t.dataset.g;
+  else sel = t.dataset.b;
+  chips();
+  list();
+  window.scrollTo({
+    top: document.querySelector(".bar").offsetTop - (parseInt(getComputedStyle(document.documentElement).paddingTop) || 0),
+    behavior: "smooth"
+  });
+});
+
+$("resetBtn").addEventListener("click", () => {
+  sel = "Todos";
+  selT = "Todos";
+  selG = "Todos";
+  query = "";
+  $("q").value = "";
+  chips();
+  list();
+});
+
+$("q").addEventListener("input", e => {
+  query = e.target.value;
+  chips();
+  list();
+});
+
+/* ===== Modelos nuevos desde Google Sheets (ver config.js) ===== */
+const TIPOS_BASE = ["Running", "Urbano", "Trail", "Skate", "Básquet"];
+const sinTilde = t => String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+const cap = t => t ? t.charAt(0).toUpperCase() + t.slice(1) : t;
+
+function parseCSV(text) {
+  const rows = []; let row = [], cur = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) {
+      if (c === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else q = false; }
+      else cur += c;
+    } else if (c === '"') q = true;
+    else if (c === ",") { row.push(cur); cur = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(cur); cur = ""; rows.push(row); row = [];
+    } else cur += c;
+  }
+  if (cur !== "" || row.length) { row.push(cur); rows.push(row); }
+  return rows.filter(r => r.some(v => v.trim() !== ""));
+}
+
+function resolveImg(v) {
+  v = (v || "").trim();
+  if (!v) return "";
+  const m = v.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]+)/);
+  if (m) return "https://drive.google.com/thumbnail?id=" + m[1] + "&sz=w1000";
+  if (/^https?:\/\//.test(v) || v.indexOf("images/") === 0) return v;
+  return "images/products/" + v;
+}
+
+function filaAProducto(h, r) {
+  const g = k => (r[h.indexOf(k)] || "").trim();
+  const marca = g("marca"), nombre = g("nombre"), img = resolveImg(g("imagen"));
+  if (!marca || !nombre || !img) return null;
+  if (["no", "false", "0", "oculto", "agotado"].indexOf(sinTilde(g("visible"))) >= 0) return null;
+  const marcaOk = (order.find(b => sinTilde(b) === sinTilde(marca))) || (D.find(x => sinTilde(x.b) === sinTilde(marca)) || {}).b || marca;
+  const tipoOk = (TIPOS_BASE.find(t => sinTilde(t) === sinTilde(g("tipo")))) || cap(g("tipo")) || "Urbano";
+  const gen = ({ mujer: "Mujer", hombre: "Hombre", unisex: "Unisex" })[sinTilde(g("genero"))] || "Unisex";
+  return { b: marcaOk, n: nombre, c: g("color"), i: img, t: tipoOk, g: gen, nuevo: ["si", "x", "nuevo"].indexOf(sinTilde(g("nuevo"))) >= 0 };
+}
+
+function iniciar() {
+  tipos = TIPOS_BASE.filter(t => D.some(x => x.t === t));
+  D.forEach(x => { if (x.t && tipos.indexOf(x.t) < 0) tipos.push(x.t); });
+  brands = order.filter(b => D.some(x => x.b === b));
+  D.forEach(x => { if (brands.indexOf(x.b) < 0) brands.push(x.b); });
+  updateSub();
+  chips();
+  list();
+}
+
+iniciar();
+
+if (window.SHEET_CSV_URL) {
+  fetch(window.SHEET_CSV_URL + (window.SHEET_CSV_URL.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now())
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(txt => {
+      const rows = parseCSV(txt);
+      if (rows.length < 2) return;
+      const h = rows[0].map(sinTilde);
+      const nuevos = rows.slice(1).map(r => filaAProducto(h, r)).filter(Boolean);
+      if (nuevos.length) { D = nuevos.concat(BASE); iniciar(); }
+    })
+    .catch(() => { if (!D.length) document.getElementById("list").innerHTML = '<p class="sub" style="padding:40px 0;text-align:center;">No se pudo cargar el catálogo. Recarga la página en un momento.</p>'; });
+}
+</script>
+</body>
+</html>
